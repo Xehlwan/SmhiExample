@@ -2,17 +2,17 @@
 
 namespace ZignSec.Integrations.SMHI.Gateway.Services.Models
 {
-    public class SMHIRequest
+    public class SMHIRequest : ISMHIRequest
     {
-        string Category { get; }
-        string Version { get; }
-        string Endpoint { get; }
+        public string Category { get; }
+        public string Version { get; }
+        public string Endpoint { get; }
 
         public SMHIRequest(string category, string version, string endpoint)
         {
             Category = category;
             Version = version;
-            Endpoint = $"/{category}/version/{version}/{endpoint}";
+            Endpoint = $"/api/category/{category}/version/{version}{endpoint}";
         }
 
         public string GetRequestUri(IQuery query)

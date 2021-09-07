@@ -7,7 +7,7 @@ namespace Lia_SMHI.consoleTest
 
         public SMHIClientSettings()
         {
-            BaseUrl = "https://opendata-download-metfcst.smhi.se/api";
+            BaseUrl = "https://opendata-download-metanalys.smhi.se";
         }
 
         public string BaseUrl {  get; set; }
